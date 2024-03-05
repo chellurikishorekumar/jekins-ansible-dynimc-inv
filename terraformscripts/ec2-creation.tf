@@ -1,21 +1,14 @@
 provider "aws"{
-region = "ap-south-1"
+region = "ap-southeast-2"
 }
 
 
 resource "aws_instance"  "AWSServer"{
-ami = "ami-0e670eb768a5fc3d4"
+ami = "ami-07e1aeb90edb268a3"
 instance_type = "t2.micro"
-key_name = "devopsdecbatchmss"
+key_name = "devopsdecbatch"
 security_groups = ["launch-wizard-2"]
 tags = {
-Name = "TerraformServer"
+Name = "tomcatservers"
 }
 }
-
-
-
-
-
-
-
